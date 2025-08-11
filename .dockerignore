@@ -1,0 +1,33 @@
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Build artifacts
+.next
+out
+dist
+
+# Env (never send secrets to build context)
+.env
+.env.*
+!.env.example
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+*.swp
+
+# Compose/Docker files (no need in build context)
+Dockerfile
+Dockerfile.*
+docker-compose.yml
+docker-compose.*.yml
