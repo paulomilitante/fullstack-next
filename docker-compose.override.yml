@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      target: dev
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/nextapp
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
